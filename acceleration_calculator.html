@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Acceleration Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e6f2ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .calculator {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+    h2 {
+      text-align: center;
+      color: #005792;
+    }
+    label, input {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #005792;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      width: 100%;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #003f63;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+      color: #005792;
+    }
+  </style>
+</head>
+<body>
+
+<div class="calculator">
+  <h2>Acceleration Calculator</h2>
+  <label for="initial">Initial Velocity (u) in m/s:</label>
+  <input type="number" id="initial" placeholder="Enter initial velocity" />
+
+  <label for="final">Final Velocity (v) in m/s:</label>
+  <input type="number" id="final" placeholder="Enter final velocity" />
+
+  <label for="time">Time (t) in seconds:</label>
+  <input type="number" id="time" placeholder="Enter time" />
+
+  <button onclick="calculateAcceleration()">Calculate Acceleration</button>
+  <div id="result"></div>
+</div>
+
+<script>
+  function calculateAcceleration() {
+    const u = parseFloat(document.getElementById("initial").value);
+    const v = parseFloat(document.getElementById("final").value);
+    const t = parseFloat(document.getElementById("time").value);
+    const result = document.getElementById("result");
+
+    if (!isNaN(u) && !isNaN(v) && t > 0) {
+      const a = (v - u) / t;
+      result.textContent = `Acceleration = ${a.toFixed(2)} m/s²`;
+    } else {
+      result.textContent = "Please enter valid values for all fields.";
+    }
+  }
+</script>
+
+</body>
+</html>
