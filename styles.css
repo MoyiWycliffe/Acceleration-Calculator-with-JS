@@ -1,0 +1,92 @@
+    body {
+      font-family: Arial, sans-serif;
+      background: #e6f2ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .calculator {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      width: 350px;
+      transition: transform 0.2s;
+    }
+
+    .calculator:hover {
+      transform: scale(1.02);
+    }
+
+    h2 {
+      text-align: center;
+      color: #005792;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #003f63;
+      font-weight: bold;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
+    }
+
+    input:focus {
+      border-color: #005792;
+      outline: none;
+    }
+
+    ::placeholder {
+      color: #999;
+    }
+
+    button {
+      padding: 12px;
+      font-size: 16px;
+      background-color: #005792;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      width: 100%;
+      cursor: pointer;
+      margin-top: 5px;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #003f63;
+    }
+
+    button.reset {
+      background-color: #ccc;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    button.reset:hover {
+      background-color: #999;
+      color: #fff;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+      color: #005792;
+      min-height: 24px;
+    }
